@@ -17,3 +17,11 @@ Python scripts that gather data from https://dnd5e.wikidot.com/ links. These are
 
 ## Test 2
 Desc
+double link [link](link)[br]test [link](link)
+
+## Link Test
+desc 
+[link 1](link 1)[link2](link2)
+[link 1](link 1) [link2](link2)
+[link 1](link 1)[br][link2](link2)
+[link 3](link 3)
