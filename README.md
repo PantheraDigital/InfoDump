@@ -25,3 +25,5 @@ desc
 [link 1](link 1) [link2](link2)
 [link 1](link 1)[br][link2](link2)
 [link 3](link 3)
+
+text[br]new line
