@@ -1,6 +1,7 @@
 # Projects
 ## [Modular Character Controller](https://github.com/PantheraDigital/Modular-Character-Controller-for-Godot)
 ![](project-imgs/PantheraDigital_ModularCharacterController.webp)
+
 A controller for any character. Can be used for first person or third person as well as NPCs. Works with Godot v4.4 to v4.6, 2D and 3D. 
 
 [tags: Godot, Game, Tool]
