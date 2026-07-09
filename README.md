@@ -63,6 +63,7 @@ I also wrote a paper about the issue: [https://docs.google.com/document/d/1iHzTu
 
 This was my first real attempt at a character controller, documentation, and a product for others. It's a pack that includes a state machine based character script, input handling, input remapping, and 2d physics handling for walking across various sloped grounds.
 Originally this was just for me so that I could make some games, but I found it useful and believed it could help others, so I released it. I also updated it as I went on to make a few games using it.
+
 You can also see the documentation webpage I made for it here: [https://pantheradigital.github.io/EntityControllerByPanthera/](https://pantheradigital.github.io/EntityControllerByPanthera/)
 And a demo playable in browser here: [https://pantheradigital.itch.io/entity-controller-demo](https://pantheradigital.itch.io/entity-controller-demo)
 
@@ -79,6 +80,6 @@ How to implement data structures that allow you to make attack chains and input 
 
 
 ## [DnD-WebScraper](https://github.com/PantheraDigital/DnD-WebScraper)
-Python scripts that gather data from [](https://dnd5e.wikidot.com/) links. These are the scripts I use to make CSVs that are used in Google Sheets to act as a database for my Character Sheet project at [](https://pantheradigital.github.io/CharacterSheet/) 
+Python scripts that gather data from [https://dnd5e.wikidot.com/](https://dnd5e.wikidot.com/) links. These are the scripts I use to make CSVs that are used in Google Sheets to act as a database for my Character Sheet project at https://pantheradigital.github.io/CharacterSheet/ 
 
 [tags: WebScraper, DnD, Tool]
