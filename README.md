@@ -1,8 +1,46 @@
 # Projects
-## [My Forever Changing Website](https://github.com/PantheraDigital/PantheraDigital.github.io)
+## [My Forever Changing Website](https://github.com/PantheraDigital/cloudflare-webpage)
 ![Screenshot of old version of this webpage.](https://github.com/PantheraDigital/InfoDump/blob/main/project-imgs/PantheraDigital_PageScreenshot.webp?raw=true)
 
-I started this webpage as a way to learn web development and as a way to better show what I've worked on. Since then it has gone through many iterations. From a template I found, to a WordPress page, to what it is now.\nI originally ditched the template for WordPress for it features, but the lack of customization and generic feel it gave my webpage made me leave to make it all myself. The biggest challenge since then has been keeping this webpage pure frontend so that it can be hosted on GitHub Pages, but still allow for adding things like my projects and posts. One work around I use to use was using Google Drive as a database, then using their API to pull Docs, parse and format them to be styled for the webpage, then add them to the DOM. I've ditched that for now and will be looking for a new hosting platform so I can use a server.
+The goal for this website has always been the same, a central place to display my projects, talk about them, and share other bits of knowledge with "posts".
+
+Through its iterations I have explored different art styles and ways to accomplish the functionality I have desired. The previous iteration was hosted on GitHub Pages, allowing for only frontend JavaScript. This version first used Google API to pull text from Google Docs formatted with HTML and some custom HTML tags, parsed the text, then created and added elements to the HTML. After this it used GitHub API to pull the text data from a file in a repo formatted with markdown. 
+
+In this latest iteration I have migrated to Cloudflare, allowing me to implement a true backend, bringing this site from pure frontend to full stack. 
+
+Website Features:
+<details>
+ <summary>Server Side Rendering</summary>
+ Using Cloudflare Workers this website has all of its content added before it is delivered to the client. Data is pulled from the sources, parsed, added to the HTML, then cached for future delivery.
+</details>
+<details>
+ <summary>Remote Content Editing</summary>
+ All content in "Projects" and "Posts" is pulled from a GitHub repo holding markdown text, parsed, then added to the page. By updating the GitHub files I can update what is shown here, without having to edit the website directly. 
+</details>
+<details>
+ <summary>Data Backup</summary>
+ All relevant data is held in multiple locations, GitHub and Cloudflare KV Store. The KV Store acts as the primary database while GitHub is the fallback or original source.
+</details>
+<details>
+ <summary>Render Caching</summary>
+ To reduce work done in the backend, the rendered HTML is cached, along with a parsed version of the markdown data. This allows the website to deliver the latest version without rebuilding the site for every client request.
+</details>
+<details>
+ <summary>HTML Template Files</summary>
+ Due to Cloudflare Workers running on the JavaScript V8 engine, the backend lacks the ability to edit HTML in the same way frontend scripts do, such as using DOM. So HTML edits are done as plain text and typical HTML templates won't work for reused elements, such as the elements in the "Projects" and "Posts" sections. 
+
+ To get around this I added a function that allows the backend to parse an HTML file as text, replace variable names that match with a JSON object's keys, and return a clean HTML structure as text that can be inserted into the main page's HTML. 
+
+ This is similar to Angular.js templates and is where the inspiration came from.
+</details>
+<details>
+ <summary>Automated Render Update</summary>
+ When ever I update a file that would require a render update, a GitHub Webhook is triggered, alerting one of my Workers to re-render the website and cach the new result.
+</details>
+<details>
+ <summary>MD to HTML Content</summary>
+ By using Marked.js, I am able to convert the GitHub markdown text into usable HTML for injection into the website when rendering. 
+</details>
 
 [tags: Website]
 
