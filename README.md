@@ -1,5 +1,5 @@
 # Projects
-## [My Forever Changing Website](https://github.com/PantheraDigital/cloudflare-webpage)
+## [My Forever Changing Website](https://github.com/PantheraDigital/cloudflare-webpage) <span class="icon star"></span>
 ![Screenshot of old version of this webpage.](https://raw.githubusercontent.com/PantheraDigital/InfoDump/refs/heads/main/project-imgs/PantheraDigital_PageScreenshot.webp)
 
 The goal for this website has always been the same, a central place to display my projects, talk about them, and share other bits of knowledge with "posts".
@@ -123,18 +123,115 @@ And a demo playable in browser here: [https://pantheradigital.itch.io/entity-con
 [tags: Unity, Game, Tool]
 
 
+## [DnD-WebScraper](https://github.com/PantheraDigital/DnD-WebScraper)
+Python scripts that gather data from https://dnd5e.wikidot.com/ links. These are the scripts I use to make CSVs that are used in Google Sheets to act as a database for my Character Sheet project at https://pantheradigital.github.io/CharacterSheet/ 
+[tags: WebScraper, DnD, Tool]
+
+
 # Posts
 ## Attack Combos
 How to implement data structures that allow you to make attack chains and input buffers. 
-link: https://github.com/PantheraDigital/AttackCombos
 <hr>
 ![ComboHeader](https://raw.githubusercontent.com/PantheraDigital/InfoDump/refs/heads/main/post-imgs/ComboHeader.webp)
+link: https://github.com/PantheraDigital/AttackCombos
 
 [tags: CodeArchitecture, Game]
 
 
-## DnD-WebScraper
-Python scripts that gather data from https://dnd5e.wikidot.com/ links. These are the scripts I use to make CSVs that are used in Google Sheets to act as a database for my Character Sheet project at https://pantheradigital.github.io/CharacterSheet/ 
+## Preventing Missed Collision In Games
+What causes missed collisions in games?
+
+When an object’s speed exceeds its own length in the direction it is moving, the colliders for that object can potentially skip over objects in the empty between space. This can happen to anything from melee weapons to projectiles.
+
 <hr>
-link to code: https://github.com/PantheraDigital/DnD-WebScraper
-[tags: WebScraper, DnD, Tool]
+link: https://docs.google.com/document/d/1iHzTuZEroXdUIEyYPclzIXDA4Sg2yUvRwt1GIFtNd9I/edit?usp=sharing
+
+[tags: CodeArchitecture, Game]
+
+## FizzBuzz Challenge
+**_FizzBuzz_** is a programming/division challenge where your program outputs _“Fizz”_ for integers divisible by 3, _“Buzz”_ for integers divisible 5, and _“FizzBuzz”_ for integers divisible by both 3 and 5.
+
+Here I will show my solution in C# as well as another solution to an alternate version of the challenge that involves using a `List` for the results.
+
+<hr>
+### FizzBuzz
+Given a set of integers print _“Fizz”_ if an integer is divisible by 3, _“Buzz”_ if the integer is divisible by 5, _“FizzBuzz”_ if it is divisible by 3 and 5, and print only the integer if none of the conditions are true.
+
+### My Solution
+```
+static void FizzBuzz()
+{
+    for (int i = 1; i < 101; i++) // start with 1 to prevent dividing by 0
+    {
+        Console.WriteLine($"{i} - {((i % 3 == 0) ? "Fizz" : "")}{((i % 5 == 0) ? "Buzz" : "")}");
+    }
+};
+```
+
+Above is the solution I have come up with, apart from the loop it is a one line solution that creates a string based on the variable `i`. The modulus operator, `%`, is used to check for any remainder after dividing `i` by 3 and 5. Based on the result of each check the string _“Fizz”_ and/or _“Buzz”_ are added.
+
+Although it is a one line solution it is not the most readable at first glance, this can be improved by separating out the ternary check.
+
+```
+static void FizzBuzz()
+{
+    for (int i = 1; i < 101; i++) // start with 1 to prevent dividing by 0
+    {
+        string fizz = (i % 3 == 0) ? "Fizz" : "";
+        string buzz = (i % 5 == 0) ? "Buzz" : "";
+        Console.WriteLine($"{i} - {fizz}{buzz}");
+    }
+};
+```
+
+The output of this solution will be a list of integers followed by _“Fizz”_, _“Buzz”_, _“FizzBuzz”_, or nothing depending on the index.
+
+```
+// Example output //
+1 -
+2 -
+3 - Fizz
+4 -
+5 - Buzz
+6 - Fizz
+…
+15 - FizzBuzz
+```
+
+### Alternate Solution
+Another version of this challenge involves storing the answers within a `List` where `i` is the index of each `List` element and the answer is stored as a `string`.
+
+Here is a solution that utilizes a `List`:
+
+```
+static List<string> FizzBuzz(int n)
+{
+    List<string> result = new List<string>();
+
+    for(int i = 1; i <= n; ++i)
+    {
+        if(i % 3 == 0 && i % 5 == 0)
+        {
+            result.Add("FizzBuzz");
+        }
+        else if (i % 3 == 0)
+        {
+            result.Add("Fizz");
+        }
+        else if (i % 5 == 0)
+        {
+            result.Add("Buzz");
+        }
+        else
+        {
+            result.Add(i.ToString());
+        }
+    }
+
+    return result;
+};
+```
+
+Now when the function is called it will return a `List` of results that is the length of argument `n` and in which each element is either its index in `string` form, _“Fizz”_, _“Buzz”_, or _“FizzBuzz”_.
+
+[tags: CodeChallenge]
