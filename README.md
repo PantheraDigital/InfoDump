@@ -1,5 +1,5 @@
 # Projects
-## [My Forever Changing Website](https://github.com/PantheraDigital/cloudflare-webpage) <span class="icon star"></span>
+## [My Forever Changing Website <span class="icon star"></span>](https://github.com/PantheraDigital/cloudflare-webpage)
 ![Screenshot of old version of this webpage.](https://raw.githubusercontent.com/PantheraDigital/InfoDump/refs/heads/main/project-imgs/PantheraDigital_PageScreenshot.webp)
 
 The goal for this website has always been the same, a central place to display my projects, talk about them, and share other bits of knowledge with "posts".
