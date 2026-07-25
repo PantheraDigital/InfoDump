@@ -124,15 +124,17 @@ And a demo playable in browser here: [https://pantheradigital.itch.io/entity-con
 
 
 # Posts
-## [Attack Combos](https://github.com/PantheraDigital/AttackCombos)
-![ComboHeader](https://raw.githubusercontent.com/PantheraDigital/InfoDump/refs/heads/main/post-imgs/ComboHeader.webp)
-
+## Attack Combos
 How to implement data structures that allow you to make attack chains and input buffers. 
+link: https://github.com/PantheraDigital/AttackCombos
+<hr>
+![ComboHeader](https://raw.githubusercontent.com/PantheraDigital/InfoDump/refs/heads/main/post-imgs/ComboHeader.webp)
 
 [tags: CodeArchitecture, Game]
 
 
-## [DnD-WebScraper](https://github.com/PantheraDigital/DnD-WebScraper)
+## DnD-WebScraper
 Python scripts that gather data from https://dnd5e.wikidot.com/ links. These are the scripts I use to make CSVs that are used in Google Sheets to act as a database for my Character Sheet project at https://pantheradigital.github.io/CharacterSheet/ 
-
+<hr>
+link to code: https://github.com/PantheraDigital/DnD-WebScraper
 [tags: WebScraper, DnD, Tool]
