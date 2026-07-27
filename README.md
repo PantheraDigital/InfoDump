@@ -154,10 +154,11 @@ link: https://docs.google.com/document/d/1iHzTuZEroXdUIEyYPclzIXDA4Sg2yUvRwt1GIF
 Here I will show my solution in C# as well as another solution to an alternate version of the challenge that involves using a `List` for the results.
 
 <hr>
-### FizzBuzz
+
+#### FizzBuzz
 Given a set of integers print _“Fizz”_ if an integer is divisible by 3, _“Buzz”_ if the integer is divisible by 5, _“FizzBuzz”_ if it is divisible by 3 and 5, and print only the integer if none of the conditions are true.
 
-### My Solution
+#### My Solution
 ```
 static void FizzBuzz()
 {
@@ -198,7 +199,7 @@ The output of this solution will be a list of integers followed by _“Fizz”_,
 15 - FizzBuzz
 ```
 
-### Alternate Solution
+#### Alternate Solution
 Another version of this challenge involves storing the answers within a `List` where `i` is the index of each `List` element and the answer is stored as a `string`.
 
 Here is a solution that utilizes a `List`:
