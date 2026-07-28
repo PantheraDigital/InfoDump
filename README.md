@@ -115,6 +115,7 @@ Character sheet editor for D&D. Handles stat calculations for easier maintenance
 ![Screenshot of Fab marketplace showing the listing for the Melee Hit Trace pack.](https://raw.githubusercontent.com/PantheraDigital/InfoDump/refs/heads/main/project-imgs/PantheraDigital_MeleeHitTrace.webp)
 
 In this project I tackled a common problem in game development, collision detection for fast moving objects. The heart of the problem is that computers can only update programs so fast. Each update positions game objects and runs calculations. When an object has a velocity that covers more distance than the game can keep up with every physics update, that object will effectively teleport. This creates the possibility for missed collision, like a car traveling through a wall. To prevent this extra collision checks need to be made in the missed space so that physics can be corrected.
+
 I also wrote a paper about the issue: [https://docs.google.com/document/d/1iHzTuZEroXdUIEyYPclzIXDA4Sg2yUvRwt1GIFtNd9I/edit?usp=sharing](https://docs.google.com/document/d/1iHzTuZEroXdUIEyYPclzIXDA4Sg2yUvRwt1GIFtNd9I/edit?usp=sharing)
 
 [tags: UnrealEngine, Game, Tool]
