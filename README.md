@@ -10,13 +10,13 @@ In this latest iteration I have migrated to Cloudflare, allowing me to implement
 
 #### Tech
 - Frontend
-  - HTML, JS, CSS
+  * HTML, JS, CSS
 - Backend
-  - Host ------- [Cloudflare](https://developers.cloudflare.com/)
-  - Database --- [GitHub](https://github.com/)
-  - Database --- [Cloudflare KV](https://developers.cloudflare.com/kv/)
-  - Platform --- [Cloudflare Workers](https://developers.cloudflare.com/workers/)
-  - MD to HTML - [Marked.js](https://marked.js.org/)
+  * Host ------- [Cloudflare](https://developers.cloudflare.com/)
+  * Database --- [GitHub](https://github.com/)
+  * Database --- [Cloudflare KV](https://developers.cloudflare.com/kv/)
+  * Platform --- [Cloudflare Workers](https://developers.cloudflare.com/workers/)
+  * MD to HTML - [Marked.js](https://marked.js.org/)
 
 #### Website Features
 <details>
