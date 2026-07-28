@@ -8,7 +8,17 @@ Through its iterations I have explored different art styles and ways to accompli
 
 In this latest iteration I have migrated to Cloudflare, allowing me to implement a true backend, bringing this site from pure frontend to full stack. 
 
-**Website Features:**
+#### Tech
+- Frontend
+  - HTML, JS, CSS
+- Backend
+  - Host ------- [Cloudflare](https://developers.cloudflare.com/)
+  - Database --- [GitHub](https://github.com/)
+  - Database --- [Cloudflare KV](https://developers.cloudflare.com/kv/)
+  - Platform --- [Cloudflare Workers](https://developers.cloudflare.com/workers/)
+  - MD to HTML - [Marked.js](https://marked.js.org/)
+
+#### Website Features
 <details>
  <summary>Server Side Rendering</summary>
  Using Cloudflare Workers this website has all of its content added before it is delivered to the client. Data is pulled from the sources, parsed, added to the HTML, then cached for future delivery.
@@ -40,7 +50,7 @@ In this latest iteration I have migrated to Cloudflare, allowing me to implement
 
 <details>
  <summary>Automated Render Update</summary>
- When ever I update a file that would require a render update, a GitHub Webhook is triggered, alerting one of my Workers to re-render the website and cach the new result.
+ When ever I update a file that would require a render update, a GitHub Webhook is triggered, alerting one of my Workers to re-render the website and cache the new result.
 </details>
 
 <details>
@@ -48,6 +58,7 @@ In this latest iteration I have migrated to Cloudflare, allowing me to implement
  By using Marked.js, I am able to convert the GitHub markdown text into usable HTML for injection into the website when rendering. 
 </details>
 
+#### Project Links
 [My Website Worker](https://github.com/PantheraDigital/cloudflare-webpage/blob/main/scripts/index.js)
 [My Secondary Worker Scripts](https://github.com/PantheraDigital/cloudflare-webpage-workers)
 [The HTML Templates](https://github.com/PantheraDigital/cloudflare-webpage/tree/main/templates)
