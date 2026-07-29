@@ -67,14 +67,14 @@ In this latest iteration I have migrated to Cloudflare, allowing me to implement
 [tags: Website]
 
 
-## [Modular Character Controller](https://github.com/PantheraDigital/Modular-Character-Controller-for-Godot)
+## [Modular Character Controller <span class="icon play-arrow"></span>](https://github.com/PantheraDigital/Modular-Character-Controller-for-Godot)
 ![Icon for Godot Engine with an antenna.](https://raw.githubusercontent.com/PantheraDigital/InfoDump/refs/heads/main/project-imgs/PantheraDigital_ModularCharacterController.webp)
 
 With my move to Godot I needed a new character controller. This time I focused on improving on where typical finite state machines fail, and that is its flexibility. I didn't want rigid states so I built a version of a state machine where the states are composed from action components, separating the responsibility of specific actions from the state to the components. This allows states to be much more flexible and encourages reusable code.
 
 View on Itch.io: [https://pantheradigital.itch.io/godot-modular-character-controller](https://pantheradigital.itch.io/godot-modular-character-controller)
 
-<a href="https://itch.io/embed-upload/17356390?color=4f6781" target="_blank">Play the demo now <span class="icon new-window"></span></a>
+<a href="https://itch.io/embed-upload/17356390?color=4f6781" target="_blank">Play the demo now <span class="icon play-arrow"></span></a>
 <details><summary><b>Controls</b></summary>
 
 * WASD - move
